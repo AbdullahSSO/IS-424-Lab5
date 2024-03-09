@@ -1,0 +1,13 @@
+{% extends "myApp/layout.html" %}
+
+{%block body%}
+    <h1>Form</h1>
+    <form action="{% url 'myApp:add' %}" method="post">
+        {{form}}
+        {% csrf_token%}
+        <input type="submit">
+    </form>
+        <div class="btn">
+    <a href="{% url 'myApp:index'%}">Show List</a>
+        </div>
+    {% endblock %}

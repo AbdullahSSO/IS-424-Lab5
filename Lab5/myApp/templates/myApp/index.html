@@ -1,0 +1,13 @@
+{% extends "myApp/layout.html" %}
+
+{% block body%}
+    <h1>Users list</h1>
+    <ul>
+    {% for user in users %}
+        <li>{{user}}</li>
+    {% endfor %}   
+    </ul>   
+    <div class="btn">
+         <a href="{% url 'myApp:add'%}">Add users</a>
+    </div>
+{% endblock %}
